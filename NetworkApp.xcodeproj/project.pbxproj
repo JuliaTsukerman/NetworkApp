@@ -13,6 +13,9 @@
 		52E7E8E12753A23D0050436C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7E8DF2753A23D0050436C /* Main.storyboard */; };
 		52E7E8E32753A23E0050436C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E7E8E22753A23E0050436C /* Assets.xcassets */; };
 		52E7E8E62753A23E0050436C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7E8E42753A23E0050436C /* LaunchScreen.storyboard */; };
+		52E7E8F02753AE440050436C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7E8EF2753AE440050436C /* Animal.swift */; };
+		52E7E8F22753BD730050436C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7E8F12753BD730050436C /* NetworkManager.swift */; };
+		52E7E8F42753DF590050436C /* RandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7E8F32753DF590050436C /* RandomCat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		52E7E8E22753A23E0050436C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E7E8E52753A23E0050436C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E7E8E72753A23E0050436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E7E8EF2753AE440050436C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		52E7E8F12753BD730050436C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		52E7E8F32753DF590050436C /* RandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		52E7E8D82753A23D0050436C /* NetworkApp */ = {
 			isa = PBXGroup;
 			children = (
+				52E7E8EE2753ADC80050436C /* Models */,
 				52E7E8D92753A23D0050436C /* AppDelegate.swift */,
 				52E7E8DB2753A23D0050436C /* SceneDelegate.swift */,
-				52E7E8DD2753A23D0050436C /* ViewController.swift */,
+				52E7E8ED2753ADB30050436C /* ViewControllers */,
 				52E7E8DF2753A23D0050436C /* Main.storyboard */,
 				52E7E8E22753A23E0050436C /* Assets.xcassets */,
 				52E7E8E42753A23E0050436C /* LaunchScreen.storyboard */,
 				52E7E8E72753A23E0050436C /* Info.plist */,
 			);
 			path = NetworkApp;
+			sourceTree = "<group>";
+		};
+		52E7E8ED2753ADB30050436C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E7E8DD2753A23D0050436C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52E7E8EE2753ADC80050436C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E7E8EF2753AE440050436C /* Animal.swift */,
+				52E7E8F12753BD730050436C /* NetworkManager.swift */,
+				52E7E8F32753DF590050436C /* RandomCat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E7E8DE2753A23D0050436C /* ViewController.swift in Sources */,
+				52E7E8F42753DF590050436C /* RandomCat.swift in Sources */,
+				52E7E8F02753AE440050436C /* Animal.swift in Sources */,
+				52E7E8F22753BD730050436C /* NetworkManager.swift in Sources */,
 				52E7E8DA2753A23D0050436C /* AppDelegate.swift in Sources */,
 				52E7E8DC2753A23D0050436C /* SceneDelegate.swift in Sources */,
 			);
