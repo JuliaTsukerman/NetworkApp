@@ -27,14 +27,16 @@ class ViewController: UIViewController {
         networkManager.onCompletion = { [weak self] randomCat in
             guard let self = self else {return}
             self.updateInterfaceWith(randomCat: randomCat)
+            print(randomCat.self)
         }
         
     }
     
     func updateInterfaceWith(randomCat: RandomCat) {
         DispatchQueue.main.async {
-            self.catImageView.image = UIImage(systemName: randomCat.catUrl)
-        
+            let url = URL(string: randomCat.catUrl)
+            guard let data = try? Data(contentsOf: url!) else {return}
+                        self.catImageView.image = UIImage(data: data)
         }
         
     }
