@@ -10,4 +10,6 @@ struct Animal: Codable {
     let id: Int
     let url: String
     let webpurl: String
+    let x:Double
+    let y:Double
 }

@@ -12,7 +12,7 @@ class NetworkManager {
     var onCompletion:((RandomCat) ->Void)?
     
     func fetchCatImage(){
-        let urlString = "https://thatcopy.pw/catapi/restId/1"
+        let urlString = "https://thatcopy.pw/catapi/rest/"
         guard let url = URL(string: urlString) else {return}
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, responce, error in

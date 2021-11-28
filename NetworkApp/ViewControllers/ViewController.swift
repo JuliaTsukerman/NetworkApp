@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     
     @IBAction func showButtonPressed(_ sender: UIButton) {
         self.networkManager.fetchCatImage()
-        networkManager.onCompletion = { randomCat in
+        networkManager.onCompletion = { [weak self] randomCat in
+            guard let self = self else {return}
             self.updateInterfaceWith(randomCat: randomCat)
         }
         
