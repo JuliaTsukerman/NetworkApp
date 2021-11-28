@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         networkManager.onCompletion = { [weak self] randomCat in
             guard let self = self else {return}
             self.updateInterfaceWith(randomCat: randomCat)
-            print(randomCat.self)
         }
         
     }
