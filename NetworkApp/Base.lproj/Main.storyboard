@@ -11,12 +11,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TCM-nK-28W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TCM-nK-28W">
                                 <rect key="frame" x="50" y="94" width="314" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ksk-Kz-qa7"/>
@@ -53,7 +53,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.88287618228359821" green="0.55125489388626248" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TCM-nK-28W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="K7E-tZ-3Fr"/>
                             <constraint firstItem="waN-qb-2En" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="O7l-PK-NqJ">
@@ -68,7 +68,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="catImage" destination="TCM-nK-28W" id="0nE-ri-nXq"/>
+                        <outlet property="catImageView" destination="TCM-nK-28W" id="0nE-ri-nXq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

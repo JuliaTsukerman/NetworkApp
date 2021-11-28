@@ -8,37 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var catImage: UIImageView!
+    
+    @IBOutlet var catImageView: UIImageView!
     
     var networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        networkManager.fetchCatImage() { randomCat in
-            self.updateInterfaceWith(randomCat: randomCat)
-        }
-    }
-
-    @IBAction func showButtonPressed(_ sender: UIButton) {
-        networkManager.fetchCatImage() { randomCat in
+        
+        networkManager.onCompletion = { [weak self] randomCat in
+            guard let self = self else {return}
             self.updateInterfaceWith(randomCat: randomCat)
         }
     }
     
-    func updateInterfaceWith(randomCat: RandomCat) {
-        //guard let image = UIImage(self.randomCat.catWebpurl) else {return}
-        DispatchQueue.main.async {
-        self.catImage.image = UIImage(systemName: randomCat.catWebpurl)
-            print(randomCat.catWebpurl)
-            }
-            
+    @IBAction func showButtonPressed(_ sender: UIButton) {
+        self.networkManager.fetchCatImage()
+        networkManager.onCompletion = { randomCat in
+            self.updateInterfaceWith(randomCat: randomCat)
+        }
+        
     }
-
-//guard let image = UIImage(data: data) else { return }
-//DispatchQueue.main.async {
-    //self.imageView.image = image
-   // self.activityIndicator.stopAnimating()
+    
+    func updateInterfaceWith(randomCat: RandomCat) {
+        DispatchQueue.main.async {
+            self.catImageView.image = UIImage(systemName: randomCat.catUrl)
+        
+        }
+        
+    }
 }
 

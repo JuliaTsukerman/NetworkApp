@@ -8,14 +8,17 @@
 import Foundation
 
 class NetworkManager {
-    func fetchCatImage(completionHandler: @escaping (RandomCat) -> Void){
+    
+    var onCompletion:((RandomCat) ->Void)?
+    
+    func fetchCatImage(){
         let urlString = "https://thatcopy.pw/catapi/restId/1"
         guard let url = URL(string: urlString) else {return}
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, responce, error in
             if let data = data {
                 if let randomCat =  self.parseJSON(withData: data){
-                    completionHandler(randomCat)
+                    self.onCompletion?(randomCat)
                 }
             }
         }
